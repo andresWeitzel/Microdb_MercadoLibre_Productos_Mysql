@@ -1,1 +1,1 @@
-{"resources":{}}
+{"resources":{"Scripts/01_microdb_ml_productos_DDL.sql":{"default-datasource":"mysql8-187ab5e58b5-7984ea31036985fe","default-catalog":"microdb_mercadolibre_productos"},"Scripts/02_microdb_ml_productos_DML.sql":{"default-datasource":"mysql8-187ab5e58b5-7984ea31036985fe","default-catalog":"microdb_mercadolibre_productos"}}}

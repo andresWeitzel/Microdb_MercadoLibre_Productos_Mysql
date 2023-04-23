@@ -36,11 +36,11 @@ subtitle varchar(100) default NULL,
 seller_id int(20) NOT NULL,
 category_id varchar(100) not NULL,
 official_store_id varchar(100) default NULL,
-price int(10) NOT NULL,
-base_price int(10) NOT NULL,
-original_price int(10) NOT NULL,
-initial_quantity int(10) NOT NULL,
-available_quantity int(10) NOT NULL,
+price decimal(6,3) NOT NULL,
+base_price decimal(6,3) NOT NULL,
+original_price decimal(6,3) NOT NULL,
+initial_quantity decimal(6,3) NOT NULL,
+available_quantity decimal(6,3) NOT NULL,
 creation_date datetime not null,
 update_date datetime not NULL
 );
@@ -77,10 +77,10 @@ sold_quantity int(10) default NULL,
 buyind_mode varchar(50) DEFAULT NULL,
 listing_type_id varchar(50) DEFAULT NULL,
 product_condition varchar(50) DEFAULT NULL,
-permalink varchar(255) DEFAULT NULL,
-thumbnail_id varchar(255) DEFAULT NULL,
-thumbnail varchar(255) DEFAULT NULL,
-secure_thumbnail varchar(255) DEFAULT NULL,
+permalink varchar(500) DEFAULT NULL,
+thumbnail_id varchar(500) DEFAULT NULL,
+thumbnail varchar(500) DEFAULT NULL,
+secure_thumbnail varchar(500) DEFAULT NULL,
 creation_date datetime not null,
 update_date datetime not null,
 stop_time datetime not null
@@ -117,7 +117,7 @@ create table products_specifications(
 
 id int(12) auto_increment primary key,
 product_id int(12) NOT NULL,
-specification_uuid varchar(255) NOT NULL
+specification_uuid varchar(500) NOT NULL
 );
 
 
@@ -146,7 +146,7 @@ create table products_pictures(
 
 id int(12) auto_increment primary key,
 product_id int(12) NOT NULL,
-pictures_uuids varchar(255) NOT NULL
+pictures_uuids varchar(500) NOT NULL
 );
 -- ======= Restricciones Tabla products_pictures ===========
 
