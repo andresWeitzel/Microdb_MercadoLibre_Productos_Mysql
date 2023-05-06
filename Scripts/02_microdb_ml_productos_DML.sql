@@ -23,14 +23,19 @@ insert into products (id, site_id, title, subtitle, seller_id, category_id
 , available_quantity, creation_date, update_date) values
 (1, 'MLA', 'Zapatilla Fila Heating Mujer', null, 1, 'MLA109027', null, 26.000, 26.000, 26.000
 , 200, 180, now(), now()),
-(2, 'MLA', 'Lavavajillas Whirlpool WSFO3T2 de 10 cubiertos blanco 220V - 240V', 'MLA-89902122122', 2, 'MLA15293581', null, 152.999, 287.499, 287.499
+(2, 'MLA', 'Lavavajillas Whirlpool WSFO3T2 de 10 cubiertos blanco 220V - 240V', null , 2, 'MLA15293581', 'MLA-89902122122', 152.999, 287.499, 287.499
 , 320, 280, now(), now()),
-(3, 'MLA', 'Smart Tv Noblex Dk43x7100pi Led 43'' Full Hd Con Android Tv', 'MLA-62172721822', 3, 'MLA19712050', null, 89.999, 
+(3, 'MLA', 'Smart Tv Noblex Dk43x7100pi Led 43'' Full Hd Con Android Tv', null, 3, 'MLA19712050', null, 89.999, 
 109.999, 109.999, 900, 450, now(), now()),
-(4, 'MLA', 'Conjunto Deportivo Fila Sport Slim Training', 'MLA-1156522165', 3, 'MLA1222112', null, 20.679, 
+(4, 'MLA', 'Conjunto Deportivo Fila Sport Slim Training', null, 3, 'MLA1222112', 'MLA-1156522165', 20.679, 
 20.679, 20.679, 300, 249, now(), now()),
-(5, 'MLA', 'Bomba Sumergible Pozo Napa 2 Pulgadas 0,5 Hp 1000 L/h Cable', 'MLA-1106811056', 4, 'MLA1726621', null, 50.874, 
-121.238, 121.238, 450, 320, now(), now());
+(5, 'MLA', 'Bomba Sumergible 0,5 Hp', 'Bomba Sumergible Pozo Napa 2 Pulgadas 0,5 Hp 1000 L/h Cable', 4 ,'MLA-1106811056', 'MLA1726621', 50.874, 
+121.238, 121.238, 450, 320, now(), now()),
+(6, 'MLA', 'Xiaomi Mi Smart Band 7 1.62', 'Xiaomi Mi Smart Band 7 1.62" caja negra, malla negra', 4 , 'MLA-88754346', 'MLA4353222', 
+20.800, 20.800, 20.800, 1200, 680, now(), now()),
+(7, 'MLA', 'Xiaomi Imilab KW66 Smart Watch 1.28 " 45.3 mm', 'Smartwatch Imilab KW66 Smart Watch 1.28" caja 45.3mm de aleación de zinc black, malla black de silicona'
+, 5 , 'MLA-22212314', 'MLA2323231', 
+19.650, 19.650, 19.650, 3340, 221, now(), now());
 
 
 insert into products_details(id, product_id, description,  status, warranty, sold_quantity, buyind_mode
@@ -68,6 +73,20 @@ insert into products_details(id, product_id, description,  status, warranty, sol
 , 'D_NQ_NP_2X_692766-MLA49850105082_052022-F.webp' 
 , 'https://http2.mlstatic.com/D_NQ_NP_2X_692766-MLA49850105082_052022-F.webp'
 , 'https://http2.mlstatic.com/D_NQ_NP_2X_692766-MLA49850105082_052022-F.webp'
+, now(), now(), '2040-01-02 08:00'),
+(6, 6, 'Con 10 años de trayectoria, Xiaomi se posiciona como uno de los líderes indiscutidos en el mercado de los smartwatches. Sus productos se destacan por la calidad, el diseño sencillo y muy buenas prestaciones. La Mi Band tiene todo lo necesario para acompañarte en tu rutina.'
+, 'active', 'active', 345, 'buy_it_now', 'gold_pro', 'new'
+, 'https://www.mercadolibre.com.ar/xiaomi-mi-smart-band-7-162-caja-negra-malla-negra/p/MLA19174175#reco_item_pos=2&reco_backend=machinalis-pdp-domains&reco_backend_type=low_level&reco_client=pdp-other-domain&reco_id=138439ab-b1ec-4b59-805a-8a329e45a42d'
+, 'D_NQ_NP_2X_974754-MLA54925550069_042023-F.webp' 
+, 'https://http2.mlstatic.com/D_NQ_NP_2X_974754-MLA54925550069_042023-F.webp'
+, 'https://http2.mlstatic.com/D_NQ_NP_2X_974754-MLA54925550069_042023-F.webp'
+, now(), now(), '2040-01-02 08:00'),
+(7, 7, 'Tecnología, calidad y sofisticación definen al smartwatch de Imilab. Sus diferentes funcionalidades logran que este reloj inteligente se convierta en un nuevo aliado para acompañarte en tu rutina de deporte, trabajo y ocio.'
+, 'active', 'active', 221, 'buy_it_now', 'gold_pro', 'new'
+, 'https://www.mercadolibre.com.ar/smartwatch-imilab-kw66-smart-watch-128-caja-453mm-de-aleacion-de-zinc-black-malla-black-de-silicona/p/MLA16597584#reco_item_pos=2&reco_backend=univb-pdp_marketplace&reco_backend_type=low_level&reco_client=pdp-v2p&reco_id=f96e0561-45f3-46d1-a464-3f7e778907fe'
+, 'D_NQ_NP_2X_684664-MLA44922050344_022021-F.webp' 
+, 'https://http2.mlstatic.com/D_NQ_NP_2X_684664-MLA44922050344_022021-F.webp'
+, 'https://http2.mlstatic.com/D_NQ_NP_2X_684664-MLA44922050344_022021-F.webp'
 , now(), now(), '2040-01-02 08:00');
 
 -- For bucket s3
@@ -76,8 +95,9 @@ insert into products_specifications (id, product_id, specification_uuid ) values
 (2, 2, '858f4698-fc01-4cde-9f58-feabc7ca680c'),
 (3, 3, '5ebbe657-e7d2-4e21-85ea-d0e9ad896746'),
 (4, 4, '6060485c-6f79-4629-a640-87391832723e'),
-(5, 5, '8ddde670-44bb-4a5b-8f77-b4cdbfe667e5');
-;
+(5, 5, '8ddde670-44bb-4a5b-8f77-b4cdbfe667e5'),
+(6, 6, 'a4b228ec-7abe-4487-9825-85a883fc48d5'),
+(7, 7, '858f4698-fc01-4cde-9f58-feabc7ca680c');
 
 /*example
 "specifications": [
@@ -96,8 +116,9 @@ insert into products_pictures (id, product_id, pictures_uuids ) values
 (2, 2, 'aad77e92-5861-4e88-b4e2-51d97e5a140d, 1deb0bf1-d07c-4327-bcb3-f2bab1c6045b, 5df62bfb-d96e-4308-97c6-b7544abbd085, ec3257cb-0d4d-40dd-be7d-28d589b02dec' ),
 (3, 3, '8732cc6b-6de7-413c-879e-0e6c22578207, 8ddde670-44bb-4a5b-8f77-b4cdbfe667e5'),
 (4, 4, '65109e61-22fb-4a0c-a9a7-073609b9dacb, 6060485c-6f79-4629-a640-87391832723e, 040f3daf-add6-4808-ac73-33fd1742d54b'),
-(5, 5, 'a632d45d-e3f9-47e0-b0ab-14931a09e352, c72b83ff-703e-47cf-8c35-b71b8a7f27aa, e423e0db-6352-42d1-82e1-2ce6c0a0cf99');
-;
+(5, 5, 'a632d45d-e3f9-47e0-b0ab-14931a09e352, c72b83ff-703e-47cf-8c35-b71b8a7f27aa, e423e0db-6352-42d1-82e1-2ce6c0a0cf99'),
+(6, 6, '8ddde670-44bb-4a5b-8f77-b4cdbfe667e5, 1deb0bf1-d07c-4327-bcb3-f2bab1c6045b, 5df62bfb-d96e-4308-97c6-b7544abbd085, 123e4567-e89b-12d3-a456-4266141'),
+(7, 7, 'aad77e92-5861-4e88-b4e2-51d97e5a140d, 6060485c-6f79-4629-a640-87391832723e, 2ce6c0a0cf99-97c6-b7544abbd085, 5df62bfb-d96e-4308-97c6-b7544abbd085');
 
 /*example
 "pictures": [
