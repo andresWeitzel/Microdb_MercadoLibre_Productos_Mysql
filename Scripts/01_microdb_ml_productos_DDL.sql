@@ -117,7 +117,11 @@ create table products_specifications(
 
 id int(12) auto_increment primary key,
 product_id int(12) NOT NULL,
-specification_uuid varchar(500) NOT NULL
+specification_uuid varchar(500) NOT null,
+stop_time datetime not null,
+creation_date datetime not null,
+update_date datetime not null
+
 );
 
 
@@ -146,7 +150,10 @@ create table products_pictures(
 
 id int(12) auto_increment primary key,
 product_id int(12) NOT NULL,
-pictures_uuids varchar(500) NOT NULL
+pictures_uuids varchar(500) NOT null,
+stop_time datetime not null,
+creation_date datetime not null,
+update_date datetime not null
 );
 -- ======= Restricciones Tabla products_pictures ===========
 
