@@ -45,12 +45,18 @@ creation_date datetime not null,
 update_date datetime not NULL
 );
 
--- ======= Restricciones Tabla sellers ===========
+-- ======= Restricciones Tabla products ===========
 
 -- UNIQUE ID
 alter table products 
 add constraint UNIQUE_products_id
 unique(id);
+
+
+-- UNIQUE TITLE_SUBTITLE
+alter table products 
+add constraint UNIQUE_products_title_subtitle
+unique(title,subtitle);
 
 
 -- CHECK UPDATE_DATE
@@ -93,6 +99,12 @@ alter table products_details
 add constraint UNIQUE_products_details_id
 unique(id);
 
+-- UNIQUE PRODUCT_ID
+alter table products_details 
+add constraint UNIQUE_products_details_product_id
+unique(product_id);
+
+
 -- FK PRODUCTS
 alter table products_details 
 add constraint FK_products_details_product_id 
@@ -132,6 +144,13 @@ alter table products_specifications
 add constraint UNIQUE_products_specifications_id
 unique(id);
 
+
+-- UNIQUE PRODUCT_ID
+alter table products_specifications 
+add constraint UNIQUE_products_specifications_product_id
+unique(product_id);
+
+
 -- FK PRODUCTS
 alter table products_specifications 
 add constraint FK_products_specifications_id 
@@ -161,6 +180,12 @@ update_date datetime not null
 alter table products_pictures
 add constraint UNIQUE_products_pictures_id
 unique(id);
+
+-- UNIQUE PRODUCT_ID
+alter table products_pictures 
+add constraint UNIQUE_products_pictures_product_id
+unique(product_id);
+
 
 -- FK PRODUCTS
 alter table products_pictures
